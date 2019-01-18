@@ -1,0 +1,4 @@
+1：下载安装python
+2：熟悉python语言的优缺点
+3：熟悉python语言的解释器，了解基本的python语法特点
+4：学习python的基本数据类型

@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hash与JASON的使用</title>
+<script>
+	function show_person(p){
+		document.write('<p>姓名：<b>'+p.name+'</b></p>');
+		document.write('<p>年龄：<b>'+p.age+'</b></p>');
+		document.write('<p>教育经历：</p><ul>');
+		for (var i =0;i<p.edus.length;i++){
+			document.write('<li>'+p.edus[i]+'</li>');
+		}
+		document.write('</ul>');
+		document.write('<p>所获奖励：</p><ul>');
+		for (var i =0;i<p.certs.length;i++){
+			document.write('<li>'+p.certs[i].year+'年：获得'+p.certs[i].content+'</li>');
+		}
+		document.write('</ul>');
+	}
+	//person就是一个JSON结构，里面使用了hash和数组，并且两者相互嵌套
+	var person={name:'小明',age:20};
+	//新增一个key:value，value是数组的形式
+	person.edus=['第一小学','第二中学','第三高级中学'];
+	//新增一个key:value，value是元素为hash的数组
+	person.certs= [
+		{year:1985, content:'奥数一等奖'},
+		{year:1999, content:'优秀少先队员'},
+		{year:2004, content:'优秀团员'}
+	];
+	
+	show_person(person);
+///////////////////////// 对hash的定义，以及提取value  /////////////////////////////
+	var a ={};			//定义空的hash
+	var b={name:'tom',age:20}; //如果key不是纯英文，需要使用引号 
+	var c = {'姓名':'汤姆','年龄':20,'**':'星号'};
+	alert(b.name); 		//显示tom
+	alert(c['姓名']);	//显示 汤姆
+	alert(c['**']);		//显示 星号
+	alert(b.notExist); 	//显示undefined
+	
+	b.newKey = '新加入的值';
+	alert(b.newKey);	//显示新加入的值
+	var url={};
+	url['腾讯'] ='http://www.qq.com';
+	url['百度'] = 'http://www.baidu.com';
+	url['搜狐'] = 'http://www.sohu.com';
+	
+	document.write('<h3>友情链接<h3>');
+	for (var key in url){ 		//变量遍历hash的key，每次输出一条链接信息
+		var value= url[key];
+		document.write('<a href="'+value+'">');
+		document.write(key);
+		document.write('</a>');
+	}
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<property>
+	<cell>RNC,NodeB,    FDDCell,Version,Model,CellId,dualCellId,localCellId,locationAreaCode,twinCellList
+	</cell>
+	<bts>BTSEquipment,BTSCell,Version,Model,antennaAccessList,localCellId
+	</bts>
+	<rru>BTSEquipment,RemoteRadioHead,Version,Model,antennaAccessList
+	</rru>
+</property>

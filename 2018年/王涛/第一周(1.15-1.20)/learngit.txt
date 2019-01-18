@@ -1,0 +1,12 @@
+下载安装git
+进入本地的一个文件夹，在此处 $ git init
+$ git clone git@gitee.com:zters/awesome-oes.git 将远程的库克隆至本地文件夹中。
+可以发现本地文件夹中多了awesome-oes文件夹，进入并新建自己的文件夹，新建.txt文件并写入总结内容
+$ git add -A 将本次增加内容全部提交至缓存区
+$ git commit -m"新增" 将缓存区中的内容提交至本地仓库
+$ git push origin master 将本地仓库的内容推送至远程仓库
+
+遇到的问题：
+push 之前一定要clone远程仓到本地。没有clone是无法push的
+首次使用需要将SSH key 与网站绑定，这个因为不知道导致屡次push 失败
+想要add 某一文件夹，屡试而不成功。只好使用 add -A 命令

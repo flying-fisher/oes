@@ -1,0 +1,20 @@
+abcdef12345	abcdef12345	0
+	abcde	-1
+000000		1
+abc123d	abc123	1
+123abc	123abc1	-1
+ABC123DEF	abc123def	-1
+abc123def	ABC123DEF	1
+ABC123def	ABC123efg	-1
+ifk222uzy	ifk222uxy	1
+ABC110	ABC11	1
+ABC11	ABC111	-1
+mmm898	mmm998	-1
+kkd753	kkd750	1
+0112eFg	112eFg	1
+iklFFd6	iklFFd00006	-1
+mois￥djf2354$	hoikds90	-2
+^dsfio212	234jih——	-2
+dsf……	dsf	-2
+dsfioj2134	7846458798（	-2
+cbvsa345	cbvsa#345	-2

@@ -1,0 +1,31 @@
+git_2:
+
+git温习补充：
+
+1、日常提交：
+输入初始化命令：
+$ git init
+  Initialized empty Git repository in C:/Users/lenovo/.git/
+取回更新：
+$ git fetch origin master
+合并分支：
+$ git merge
+(也可以用 git pull 一步更新合并)
+cd寻址建立文件夹并新建txt：
+$ cd awesome-oes 
+$ cd 郑华
+$ mkdir 第二周(01.21-01.27)
+提交更新：
+$ git add /c/Users/lenovo/awesome-oes/郑华
+$ git commit 
+$ git push
+
+
+2、新增试错步骤：
+a、clone 旧有版本库不可行，需要直接更新
+b、commit 只有增加空文件夹而无文件无效：nothing to commit, working tree clean
+c、每次主机更新后都需要重新更新本机版本库才能提交
+
+3、复习可参考来源：
+http://www.ruanyifeng.com/blog/2014/06/git_remote.html
+https://www.liaoxuefeng.com/

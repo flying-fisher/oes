@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Init>
+	<resourceHost>65res_db</resourceHost>
+	<destHost>73cq_rmw</destHost>
+	<resourceDB>res_db</resourceDB>
+	<destDB>cq_rmw</destDB>
+	<resourceFile>test.sql</resourceFile>
+	<resultFile>result.xml</resultFile>
+</Init>

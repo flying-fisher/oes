@@ -1,0 +1,58 @@
+Python是动态语言，给同一变量可以赋不同类型的值
+
+if : 用来进行判断. if判断的结果是True才执行后面的语句
+
+for : python里面的for循环通常是对一个序列( range(), List等)进行迭代. Python不支持像C语言中的for(state1;conditon;stat2)循环
+格式
+
+break 与 continue 都有跳过后面的语句的作用，break离开当前循环, 跳过循环内的剩余部分. continue则是跳过当前iteration过程中后面的
+语句, 直接next iteration
+
+函数: Python的函数功能很强大，可以设置默认参数来简化函数的调用，应该让必选参数在前，默认参数在后。函数在定义时候，默认参数的值就被
+计算出出来了，
+如果是参数是可变类型，那么会累积之前调用的结果。所以应该将默认参数设为不变对象。
+通过在参数前加* 定义可变参数。在函数内部，参数接收到的是一个Tuple
+Lists[]列表 可变类型( index assignment; slice assignment; methods: append(item), insert(i,item), remove(item), 
+pop(index), clear(), sort(),,reverse(), copy(), extend(seque); 支持nest;可用做stack或者 queue( 效率低，不如
+collections.deque）. 
+
+列表生成式是用来构造列表的的一种非常简洁的方式，使创建的List之元素是其它sequence的operation结果(for语句)，或者满足某一筛选条件
+(if语句就是对for语句的筛选). Nested listcomp is evaluated in the context of the for that follows it.
+
+Tuple()元组: immutable, 不支持item assignment，因此List的很多方法，Tuple不支持, 所以Tuple比List更加安全. 同时作为一种序列, 
+Tuple支持indexing和slicing, 也支持nest. 
+
+单元素的Tuple，为避免歧义，元素后需跟','进行构造. Sequence unpacking利用Tuple packing
+
+Tuples: usually contain a sequence of elements that are accessed via unpacking or indexing (or even by attribute in
+the case of namedtuples). Lists are mutable, elements are accessed by iterating over the list.
+
+Sets: 无序，元素不得重复. {item1,item2...}和set()分别来创建set和空set. 用add()和remove()来增删元素。支持comprehention. 基本
+用处有使用'in'或‘not in'进行membership testing, 使用set(sequenct)精简重复元素. Set 支持集合操作比如合集,交集,差集等
+
+Dictionaries 字典: 元素是key-value pair, 其中key是immutable. 可把dictionary想象成盛装key的Set,其中value与key绑定；或是以
+key作为index的List, 所以就要求key必须唯一. dict的主要用来往key里面存value, 从key里面取出value. 
+
+Dictionary的基本操作有:  
+{} 创造空的dictionary，而不是空的Set
+d={key:value,key:value} 创建一个dict. 支持comprehension, 例如{key_expr:value_expr for x in seque}
+d[key]=value 增添新的key-value pair; 若key已经在这个dic中，则对该key进行二次赋值; dictionary的key就相当于sequence的index
+del d[key]  删除key-value对
+key in d: 用来检查dict是否含有某一key; List, Set 都支持 in
+list(d.keys()) 返回一个List, 其元素是dict的keys. set(d.keys())就是返回一个Set，元素是该dict的keys
+sorted(d.keys()) 返回一个List，元素是dic的keys, 并且按照字母顺序排序
+
+如果key是string类型，可以使用dict(string=value,string=value)这种形式构造；
+还可通过sequences of key-value pairs构造dict 
+
+Looping Techniques
+在循环字典的时候,用 items() 方法提取key 和value
+当循环一个序列, 用 enumerate() 函数提取 index 和 value
+同时循环多个序列的时候, the entries can be paired with the zip() function.
+想要逆向循环一个序列, first specify the sequence in a forward direction and then call the reversed() function.
+想要排序循环一个序列, 使用sorted() 函数可以返回一个新的排序的List，保持原来List不改动
+
+del方法: del a[1]删除index=1处的元素，del a[:]是清空该List
+
+以上数据结构支持互相之间的nest
+

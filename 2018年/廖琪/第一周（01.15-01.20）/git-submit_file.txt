@@ -1,0 +1,31 @@
+---以下是我使用第一次git.exe提交文件的操作过程--- 
+
+1.https://pan.baidu.com/s/1kU5OCOB#list/path=%2Fpub%2Fgit，下载git.exe并安装。
+
+2.https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000，安装后启动git.bush ,输入设置信息 
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+3.克隆awesome-oes库，在网页上点击克隆，复制https下的库地址，在git.bash中输入
+$ git clone <版本库地址>
+
+4.初始化git库，输入命令
+$ git init
+
+显示
+Initialized existing Git repository in C:/Users/Liao/awesome-oes/.git/
+
+5.初始化成功后，git.bash自动寻址到awesome-oes文件夹下，可使用 ls、mkdir、cd 等命令查看、创建或寻址文件夹
+
+6.创建文件夹添加好文件后，在git.bash中先寻址到自己所在文件夹并获取文件夹地址
+$ git add /c/Users/Liao/awesome-oes/廖琪
+$ git commit
+$ git push -u origin master
+
+7.对文件作出修改后再次提交，输入命令
+$ git add /c/Users/Liao/awesome-oes/廖琪/第一周（01.15-01.20）/git-submit_file.txt
+$ git commit
+$ git push origin master
+
+---使用git push origin master命令提交时，需要输入gitee用户名和密码---
+

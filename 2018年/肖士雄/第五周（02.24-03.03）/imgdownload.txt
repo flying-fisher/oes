@@ -1,0 +1,9 @@
+*** Settings ***
+Library           imgdownload
+
+*** Test Cases ***
+baidu_img
+    Openweb    https://image.baidu.com
+    search    tree
+    download    D:\\shanghai\\Leetcode\\download\\
+    close

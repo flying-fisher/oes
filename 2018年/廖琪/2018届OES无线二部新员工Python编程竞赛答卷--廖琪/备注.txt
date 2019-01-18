@@ -1,0 +1,1 @@
+exer.exe打包环境为win7专业版32位系统，python2.7.14

@@ -1,0 +1,46 @@
+1. 创建git资源库
+	git init --bare 库名称
+	
+2. 在用户文件夹下把资源clone下来
+	git clone <仓库目录> /g/software/repository/git/itheima <用户目录> .
+	注意：clone时候用户目录必须为空
+
+3. 创建一个文件，纳入到版本控制中。
+	git add <文件名>
+	第一次执行会出警告：warning: LF will be replaced by CRLF in readme.txt.
+						The file will have its original line endings in your working directory.
+	警告处理：需要配置用户信息
+					git config user.name = "徐泽兵"
+					git config user.email = "邮箱"
+					
+4. 提交到本地版本库里。
+	git commit <文件名>
+	
+5. 推送到远程共享版本库中
+	git push origin master
+	
+6. 切换用户，拉取最新的文件
+	git pull
+	
+7：git冲突
+git pull 之后有冲突:
+
+$ git pull
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From g:/software/repository/git/itheima26
+   50db030..a04027a  master     -> origin/master
+Auto-merging readme.txt
+CONFLICT (content): Merge conflict in readme.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+解决方法:
+1.git mergetool
+	调用上面命令之后会提示你输入编辑方法,输入:beyond compare 进入编辑器.
+
+2.编辑完之后.调用git commit -a 把当前目录中所有都提交到本地库中.
+
+3.git push origin master 提交到远程库中.

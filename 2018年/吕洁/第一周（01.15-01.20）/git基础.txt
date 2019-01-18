@@ -1,0 +1,9 @@
+第一次使用git将项目上传到github：
+1.先在https://github.com/上注册一个github账号；再在https://git-for-windows.github.io/上安装git工具。
+2.接下来就本地操作了，右键你的项目，会出现两个新选项，分别是Git Gui Here,Git Bash Here，选择Git Bash Here，进入到项目操作界面。
+3.git clone https://gitee.com/zters/awesome-oes.git
+4.这个步骤之后本地项目文件夹下面会多出来一个文件夹awesome-oes，把本地项目文件夹下的文件复制到新文件夹下。
+5.输入命令cd awesome-oes，进入该文件夹。
+6.git add .（把awesome-oes文件夹下面的文件添加进来）
+7.git commit -m "提交信息"
+8.git push -u origin master
